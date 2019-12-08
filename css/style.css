@@ -325,8 +325,13 @@ template {
   .button--primary {
     background-color: #E3B873;
     color: #ffffff; }
+  .button--outline {
+    border: 1px solid #ffffff;
+    background-color: transparent;
+    color: #ffffff; }
 
 .container {
+  width: 85%;
   max-width: 1256px;
   margin: auto; }
 
@@ -338,13 +343,15 @@ template {
   z-index: 99;
   background-color: #131313;
   padding: 24px 0; }
-  .header .menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center; }
-    .header .menu .logo {
-      color: #E3B873;
-      text-transform: uppercase; }
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.logo {
+  color: #E3B873;
+  text-transform: uppercase; }
 
 .nav__item {
   color: #ffffff;
@@ -355,21 +362,44 @@ template {
 .phone {
   color: #E3B873; }
 
-.contacts__phone {
-  margin-right: 45px; }
+.phone {
+  margin-right: 45px !important; }
 
 .hero {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   padding-top: 100px;
   background: #131313 url("../img/hero-bg.jpg") no-repeat center/cover;
   height: 100vh;
   color: #ffffff; }
+  .hero__content {
+    max-width: 450px; }
+  .hero__text {
+    font-size: 22px;
+    min-width: 500px; }
+  .hero__button {
+    margin-right: 20px; }
   .hero__instagram {
     position: absolute;
     left: 0;
     top: 0;
     max-width: 80px;
     height: 100vh; }
+  .hero__scroll-down {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    bottom: 0;
+    min-width: 247px;
+    min-height: 97px;
+    background-color: #131313;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-decoration: none; }
 
 .instagram {
   background-color: #131313;
@@ -383,7 +413,12 @@ template {
     transform: rotate(90deg); }
 
 .title {
-  margin: 0px; }
+  margin: 0px;
+  font-family: 'Yeseva One', cursive;
+  text-transform: uppercase;
+  font-style: 40px; }
+  .title--primary {
+    color: #E3B873; }
 
 *, *:before, *:after {
   box-sizing: border-box; }
