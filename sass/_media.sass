@@ -29,11 +29,39 @@
       color: $ligth
     &__card
       margin-bottom: 5.7rem  
-
+  .swiper
+    &-slider
+        &-image
+          margin-top: 0
+  .mobile-order-top
+    order: -1
 @media screen and ( max-width: 576px )
+  .section
+    &--dark
+      padding: 1rem 0
+  .col-50
+    width: 96%
   .section-title
+    width: 22rem
+    margin: auto
+    margin-top: -rem
+    padding: 0
+    &__text
+      margin: 0
+      padding: 0
+      width: 96%
+      text-align: center
+      font-size: 1rem
+    &__heading
+      text-align: center
+      &--primary
+        width: 96%
     &__description
       max-width: 21.86rem
+    &__word
+      justify-content: center
+      &::after
+        display: none
   .contacts
     &__phone
       margin-right: 0
@@ -56,7 +84,12 @@
       display: block
       min-width: 22.86rem
       margin-bottom: 1.85rem
-
+  .swiper-slide
+    margin: auto
+    &-main
+      display: none
+    &-mob
+      display: block
 @media screen and ( max-width: 320px )
   .hero
     &__scroll-down

@@ -588,7 +588,12 @@ img {
 
 .swiper-slide {
   display: flex;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  padding-bottom: 2rem; }
+  .swiper-slide-mob {
+    display: none; }
+  .swiper-slider-image {
+    margin-top: -13rem; }
   .swiper-slide__text {
     flex-basis: 50%;
     margin-bottom: 2.42rem;
@@ -765,11 +770,38 @@ design__section-ttile {
     .design__section-title {
       color: #ffffff; }
     .design__card {
-      margin-bottom: 5.7rem; } }
+      margin-bottom: 5.7rem; }
+  .swiper-slider-image {
+    margin-top: 0; }
+  .mobile-order-top {
+    order: -1; } }
 
 @media screen and (max-width: 576px) {
-  .section-title__description {
-    max-width: 21.86rem; }
+  .section--dark {
+    padding: 1rem 0; }
+  .col-50 {
+    width: 96%; }
+  .section-title {
+    width: 22rem;
+    margin: auto;
+    margin-top: -rem;
+    padding: 0; }
+    .section-title__text {
+      margin: 0;
+      padding: 0;
+      width: 96%;
+      text-align: center;
+      font-size: 1rem; }
+    .section-title__heading {
+      text-align: center; }
+      .section-title__heading--primary {
+        width: 96%; }
+    .section-title__description {
+      max-width: 21.86rem; }
+    .section-title__word {
+      justify-content: center; }
+      .section-title__word::after {
+        display: none; }
   .contacts__phone {
     margin-right: 0;
     color: #ffffff;
@@ -789,7 +821,13 @@ design__section-ttile {
   .hero__button {
     display: block;
     min-width: 22.86rem;
-    margin-bottom: 1.85rem; } }
+    margin-bottom: 1.85rem; }
+  .swiper-slide {
+    margin: auto; }
+    .swiper-slide-main {
+      display: none; }
+    .swiper-slide-mob {
+      display: block; } }
 
 @media screen and (max-width: 320px) {
   .hero__scroll-down {
