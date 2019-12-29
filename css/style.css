@@ -360,7 +360,8 @@ template {
 
 .policy__label {
   display: flex;
-  align-items: center; }
+  align-items: center;
+  font-size: 1.142rem; }
   .policy__label::before {
     content: '';
     width: 18px;
@@ -369,6 +370,8 @@ template {
     border-radius: 1px;
     cursor: pointer;
     margin-right: 0.64rem; }
+  .policy__label--center {
+    justify-content: center; }
 
 .container {
   width: 86%;
@@ -762,8 +765,54 @@ img {
 .section-title__heading {
   font-size: 1.428rem; }
 
-design__section-ttile {
-  margin-bottom: 2.78rem; }
+.design {
+  padding-bottom: 30rem; }
+  .design__section-ttile {
+    margin-bottom: 2.78rem; }
+
+.footer {
+  background: #131313 url("../img/footer-bg.jpg") no-repeat center/cover;
+  padding-top: 3rem; }
+  .footer__wrap {
+    background-color: #181818;
+    max-width: 63.07rem;
+    margin: auto;
+    padding: 2.5rem;
+    margin-top: -20rem;
+    margin-bottom: 3.714rem; }
+  .footer__title {
+    text-transform: uppercase;
+    font-family: 'Yeseva One', cursive;
+    font-weight: normal;
+    font-size: 1.428rem;
+    text-align: center;
+    margin-bottom: 3.214rem;
+    margin-top: 0; }
+  .footer__form {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 37.142rem;
+    margin: auto;
+    justify-content: space-between; }
+  .footer__input {
+    padding-top: 0.3rem; }
+    .footer__input-group {
+      display: flex;
+      flex-direction: column;
+      flex-basis: 45%;
+      margin-bottom: 3.2rem; }
+      .footer__input-group--full-width {
+        flex-basis: 100%;
+        margin-bottom: 2rem; }
+  .footer__policy {
+    flex-basis: 100%;
+    margin-bottom: 3.6rem; }
+  .footer__button {
+    margin: auto;
+    padding: 1.285rem 4.5rem; }
+  .footer__menu {
+    background-color: #131313;
+    padding: 4.285rem 0; }
 
 .modal {
   opacity: 0;
@@ -841,7 +890,8 @@ design__section-ttile {
   .card__text {
     margin-left: 0; }
   .design {
-    background-color: #131313; }
+    background-color: #131313;
+    border-bottom: 1px solid #000; }
     .design__section-title {
       color: #ffffff; }
     .design__card {
@@ -949,7 +999,27 @@ design__section-ttile {
       margin-bottom: 5.14rem; }
     .control__input {
       border-bottom: 1px solid #ffffff;
-      margin-bottom: 4.5rem; } }
+      margin-bottom: 4.5rem; }
+  .footer {
+    background-color: #131313;
+    background-image: none;
+    border-bottom: 1px solid dark; }
+    .footer__wrap {
+      background-color: #131313;
+      width: 100%;
+      min-width: 100%; }
+    .footer__form {
+      display: flex;
+      flex-direction: column;
+      background-color: #131313;
+      flex-basis: 100%; }
+    .footer__input {
+      border-bottom: 1px solid #ffffff;
+      color: rgba(255, 255, 255, 0.5); }
+    .footer_label {
+      color: rgba(255, 255, 255, 0.5); }
+    .footer ::placeholder {
+      color: #ffffff; } }
 
 @media screen and (max-width: 320px) {
   .hero__scroll-down {

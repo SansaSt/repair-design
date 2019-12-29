@@ -25,6 +25,7 @@
       margin-left: 0
   .design
     background-color: $dark
+    border-bottom: 1px solid #000
     &__section-title
       color: $ligth
     &__card
@@ -138,7 +139,27 @@
     &__input
       border-bottom: 1px solid $ligth 
       margin-bottom: 4.5rem
-
+  .footer
+    background-color: $dark
+    background-image: none
+    border-bottom: 1px solid dark
+    &__wrap
+      background-color: $dark
+      width: 100%
+      min-width: 100%
+    &__form
+      display: flex
+      flex-direction: column
+      background-color: $dark
+      flex-basis: 100%
+    &__input
+      border-bottom: 1px solid $ligth 
+      color: rgba(255, 255, 255, 0.5)
+    &_label
+      color:  rgba(255, 255, 255, 0.5)
+    ::placeholder
+      color: $ligth
+      
 @media screen and ( max-width: 320px )
   .hero
     &__scroll-down
