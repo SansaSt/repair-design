@@ -825,7 +825,8 @@ img {
     max-width: 965px;
     margin: auto;
     margin-bottom: 4rem;
-    margin-top: 3.07rem; }
+    margin-top: 3.07rem;
+    min-height: 465px; }
   .footer__text {
     font-family: 'Yeseva One', normal;
     font-size: 1.2rem;
