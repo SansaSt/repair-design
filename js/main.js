@@ -13,14 +13,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
   });
 
   closeBtn.addEventListener('click', switchModal)
-  
 });
 
 */
 
 
 $(document).ready(function () {
-  var modal = $('.modal'),
+      var modal = $('.modal'),
       modalBtn = $('[data-toggle=modal]'),
       closeBtn = $('.modal__close');
 
