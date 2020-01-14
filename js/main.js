@@ -80,6 +80,71 @@ $(document).ready(function () {
 
   });
 
+  $('.control__form').validate({
+    errorClass: "invalid",
+    rules: {
+      // строчное правило
+      userName: {
+        required: true,
+        minlength: 2
+      },
+      userPhone: "required",
+      // правило-объект (блок)
+      userEmail: {
+        required: true,
+        email: true
+      },
+    }, //сообщения
+    messages: {
+      userName: {
+      required: "Имя обязательно",
+      minlength: "Имя не короче двух букв"
+      }, 
+      userPhone: "Телефон обязателен",
+      userEmail: {
+        required: "Обязательно укажите email",
+        email: "Введите в формате: name@domain.com"
+      }
+    }
+
+  });
+
+  $('.footer__form').validate({
+    errorClass: "invalid",
+    rules: {
+      // строчное правило
+      userName: {
+        required: true,
+        minlength: 2
+      },
+      userPhone: "required",
+      // правило-объект (блок)
+      userEmail: {
+        required: true,
+        email: true
+      },
+      userQuestion: {
+        required: true,
+        minlength: 2
+      },
+    }, //сообщения
+    messages: {
+      userName: {
+      required: "Имя обязательно",
+      minlength: "Имя не короче двух букв"
+      },
+      userPhone: "Телефон обязателен",
+      userEmail: {
+        required: "Обязательно укажите email",
+        email: "Введите в формате: name@domain.com"
+      },
+      userQuestion: {
+        required: "Напишите Ваш вопрос",
+        minlength: "Вопрос не короче двух букв"
+        },
+    }
+
+  });
   // маска для телефона
 
   $('[type=tel]').mask('+7(000) 00-00-000', {placeholder: "+7 (___) __-__-___"});
