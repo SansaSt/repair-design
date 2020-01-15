@@ -26,7 +26,7 @@ try {
 
     //Recipients
     $mail->setFrom('sofakamysenko@gmail.com', 'Софья');
-    $mail->addAddress('kamysofya@yandex.ru');     // Add a recipient
+    $mail->addAddress('starkwork13@yandex.ru');     // Add a recipient
     
 
     // Content
@@ -34,9 +34,12 @@ try {
     $mail->Subject = 'Новая заявка сайта';
     $mail->Body    = "Имя пользователя: ${userName}, его телефон: ${userPhone}. Его почта: ${userEmail}";
   
-
-    $mail->send();
-    header('Location: thanks.html');
+    if ($mail->send()) {
+        echo "ok";
+    } else {
+        echo "Письмо не отправлено. Код ошибки: {$mail->ErrorInfo}";
+    }
+    
 } catch (Exception $e) {
     echo "Письмо не отправлено. Код ошибки: {$mail->ErrorInfo}";
 }
