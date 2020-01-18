@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,12 +8,11 @@
   <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
   <link rel="stylesheet" href="css/animate.css">
   <link rel="stylesheet" href="css/style.css">
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=a4ad5072-9676-4b35-8d2d-980065266ecf&lang=ru_RU" type="text/javascript">
-  </script>
   <title>Document</title>
 </head>
 <body>
   <!-- Yandex.Metrika counter --> <script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym"); ym(56883805, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/56883805" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  <div class="MAINBOX">
   <header class="header">
     <div class="container">
       <div class="menu"> 
@@ -72,6 +71,8 @@
                     <div class="swiper-slide__text">
                       <h3 class="swiper-slide__heading">Город:</h3>
                       <span class="swiper-slide__value">Ростов-на-Дону</span>
+                      <span class="swiper-slide__value">ЖК Адмирал</span>
+
                     </div>
                     <!--/.swiper-slide__text-->
                   <div class="swiper-slide__text">
@@ -166,6 +167,7 @@
             </div>
           <!-- /.col-50 -->
         </div>
+      </div>
         <!-- /.row -->
       </div>
       <!-- /.container -->
@@ -472,22 +474,25 @@
         <!-- /.form modal__form -->
       </div>
       <!-- /.footer-wrap -->
-      <div class="footer__text">
-        <h3 class="footer__header">Ростов на дону, Торговый центр Plaza</h3>
-        <h3 class="footer__phone">Прямой телефон +7 (999) 768 32 99</h3>
+      <div class="footer__mapwrap">
+          <div class="footer-stuff">
+            <div class="footer__text">
+            <h3 class="footer__header"> Ростов на дону, Торговый центр Plaza </h3>
+            <h3>Прямой телефон +7 (999) 768 32 99 </h3>
+          </div>
+          <div class="footer__icon">
+            <div class="footer__link"><a href="#" class=""><img src="img/footer-icon-1.svg" alt="Mail"></a></div>
+            <div class="footer__link"><a href="#" class=""><img src="img/footer-icon-2.svg" alt="Instagram"></a></div>
+          </div></div>
+        <div class="map footer__map" id="map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2243.3693607358878!2d49.140257315940126!3d55.78682398056252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x415ead0b63668c6b%3A0x88900941a8541fdc!2z0YHRgtGD0LTQuNGPINC40L3RgtC10YDRjNC10YDQvtCyINCU0LXQutC-0YDRg9C8!5e0!3m2!1sru!2sru!4v1579173285235!5m2!1sru!2sru" width=925 height=465 style="border:0;" allowfullscreen=""></iframe>
+        </div>
       </div>
-      <div class="footer__icon">
-        <div class="footer__link"><link href="#" class=""><img src="img/footer-icon-1.svg" alt="Mail"></div>
-        <div class="footer__link"><link href="#" class=""><img src="img/footer-icon-2.svg" alt="Instagram"></div>
       </div>
-      <div class="map footer__map" id="map">
-      
-      </div>
-    </div>
     <div class="footer__menu">
       <div class="container">
           <div class="menu"> 
-              <div class="logo menu__logo wow fadeInRight">Repair Design Project</div>
+              <div class="logo menu__logo wow fadeInRight">Repair Design Project</div> 
               <nav class="nav menu__nav">
                 <a href="#" class="nav__item">Главная</a>
                 <a href="#" class="nav__item">Проекты</a>
@@ -541,6 +546,7 @@
     <!-- /.modal__dialog -->
   </div>
   <!-- /.modal -->
+</div>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
   <script src="js/wow.min.js"></script>

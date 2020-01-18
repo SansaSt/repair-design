@@ -26,6 +26,8 @@
   .design
     background-color: $dark
     border-bottom: 1px solid #000
+    padding: 0
+    padding-top: 3.514rem
     &__section-title
       color: $ligth
     &__card
@@ -143,10 +145,12 @@
     background-color: $dark
     background-image: none
     border-bottom: 1px solid dark
+    paddng: 0
     &__wrap
       background-color: $dark
       width: 100%
       min-width: 100%
+      margin-top: 30px
     &__form
       display: flex
       flex-direction: column
@@ -159,9 +163,29 @@
       color:  rgba(255, 255, 255, 0.5)
     ::placeholder
       color: $ligth
+    &__mapwrap
+      display: flex
+      flex-direction: column
+    &__map
+     // margin: auto
+     //  min-height: 18.21rem 
+     //  min-width: 24.24rem  
+      order: -1
+      overflow: hidden 
+    &__stuff
+      order: 1
+      margin: 0
+      font-family: Yeseva One
+    &__text
+      font-size: 1.285rem
+      line-height: 1.785rem
+    &-header
+      align-items: center
       
 @media screen and ( max-width: 320px )
   .hero
     &__scroll-down
       display: none
+body 
+  overflow-x: hidden
   
