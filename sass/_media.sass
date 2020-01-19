@@ -41,13 +41,14 @@
 @media screen and ( max-width: 576px )
   .section
     &--dark
-      padding: 1rem 0
+      padding: 1rem
+      background-color: #181818
   .col-50
     width: 96%
   .section-title
     width: 22rem
     margin: auto
-    margin-top: -rem
+    margin-top: -50px
     padding: 0
     &__text
       margin: 0
@@ -76,18 +77,29 @@
   .title
     font-size: 1.64rem
   .hero
+    height: 43rem
+    paddng: 0
     &__scroll-down
       display: none
     &__content
       max-width: 22.86rem
     &__text
       font-size: 1.29rem
-      min-width: 12rem
+      min-width: 23rem
       margin-bottom: 2.28rem
+      line-height: 1.7rem
+      text-align: justify
+    &__title
+      font-size: 1.64rem
+      line-height: 2.214rem
+      padding: 0
     &__button
       display: block
-      min-width: 22.86rem
+      align-self: auto
+      min-width: 24.14rem
       margin-bottom: 1.85rem
+    &::after
+      display: none
   .swiper-slide
     margin: auto
     &-main
@@ -95,9 +107,9 @@
     &-mob
       display: block
   .control
-    background-color: $dark
     padding: 0
     padding-top: 3.57rem
+    background-color: $black
     &__text
       max-width: 24.29rem
       margin: auto
@@ -135,6 +147,8 @@
       justify-content: center
       color:  rgba(255, 255, 255, 0.5)
       margin-bottom: 0.47rem
+    &__input
+      color: $ligth
     ::placeholder
       color: $ligth
       margin-bottom: 5.14rem
@@ -151,6 +165,7 @@
       width: 100%
       min-width: 100%
       margin-top: 30px
+      margin-bottom: 0
     &__form
       display: flex
       flex-direction: column
@@ -166,21 +181,36 @@
     &__mapwrap
       display: flex
       flex-direction: column
+      margin-top: -30px
     &__map
-     // margin: auto
-     //  min-height: 18.21rem 
-     //  min-width: 24.24rem  
+      height: 255px
+      width: 330px
       order: -1
-      overflow: hidden 
-    &__stuff
-      order: 1
-      margin: 0
-      font-family: Yeseva One
+      display: block
+      text-align: center 
+    &__icon
+      align-items: center
+      margin-left: 3rem
     &__text
       font-size: 1.285rem
       line-height: 1.785rem
+      margin: auto
     &-header
       align-items: center
+    &__menu
+      display: none
+  .header
+    background-color: $black
+.invalid
+  padding-bottom: 3rem
+.policy
+  &__checkbox
+    margin-top: 3rem
+.types
+  &__section-title
+    margin-top: 2rem
+
+
       
 @media screen and ( max-width: 320px )
   .hero
@@ -188,4 +218,4 @@
       display: none
 body 
   overflow-x: hidden
-  
+ 

@@ -84,7 +84,7 @@ $(document).ready(function () {
       data: $(form).serialize(),
       success: function (response) {
         console.log('Ajax сработал. Ответ сервера: ' + response);
-        alert('Форма отправлена, мы свяжемся с вами через 10 минут');
+        location.href='http://starksofia.ru/repair-design/thanks.html';
         $(form)[0].reset();
         modal.removeClass('modal--visible');
       },
@@ -121,9 +121,25 @@ $(document).ready(function () {
         required: "Обязательно укажите email",
         email: "Введите в формате: name@domain.com"
       }
+    },
+    submitHandler: function(form) {
+      $.ajax({
+        type: "POST",
+        url: "send.php",
+        data: $(form).serialize(),
+        success: function (response) {
+          console.log('Ajax сработал. Ответ сервера: ' + response);
+          location.href='http://starksofia.ru/repair-design/thanks.html';
+          $(form)[0].reset();
+          modal.removeClass('modal--visible');
+        },
+        error: function(response) {
+          console.error('Ошибка запроса ' + response);
+        }
+      });
     }
-
-  });
+  
+    });
 
   $('.footer__form').validate({
     errorClass: "invalid",
@@ -158,6 +174,22 @@ $(document).ready(function () {
         required: "Напишите Ваш вопрос",
         minlength: "Вопрос не короче двух букв"
         },
+    },
+    submitHandler: function(form) {
+      $.ajax({
+        type: "POST",
+        url: "send.php",
+        data: $(form).serialize(),
+        success: function (response) {
+          console.log('Ajax сработал. Ответ сервера: ' + response);
+          location.href='http://starksofia.ru/repair-design/thanks.html';
+          $(form)[0].reset();
+          modal.removeClass('modal--visible');
+        },
+        error: function(response) {
+          console.error('Ошибка запроса ' + response);
+        }
+      });
     }
 
   });
@@ -165,38 +197,4 @@ $(document).ready(function () {
 
   $('[type=tel]').mask('+7(000) 00-00-000', {placeholder: "+7 (___) __-__-___"});
 
-  //создание карты
-  ymaps.ready(function () {
-    var myMap = new ymaps.Map('map', {
-            center: [55.786786, 49.142331],
-            zoom: 9
-        }, {
-            searchControlProvider: 'yandex#search'
-        }),
-
-        // Создаём макет содержимого.
-        MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-            '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-        ),
-
-        myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-            hintContent: 'Наш офис',
-            balloonContent: 'Вход со двора'
-        }, {
-            // Опции.
-            // Необходимо указать данный тип макета.
-            iconLayout: 'default#image',
-            // Своё изображение иконки метки.
-            iconImageHref: 'img/location.png',
-            // Размеры метки.
-            iconImageSize: [32, 32],
-            // Смещение левого верхнего угла иконки относительно
-            // её "ножки" (точки привязки).
-            iconImageOffset: [-5, -38]
-        });
-
-    myMap.geoObjects
-        .add(myPlacemark)
-  });
-
-});
+})
